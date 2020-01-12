@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//FR">
 <html>
   <head>
     <title>DONG</title>
      <meta charset="UTF-8">
-     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="./css/test.css">
+     <link rel="stylesheet" href="./js/index.js">
   </head>
 
   <script type="text/javascript">
@@ -12,40 +13,60 @@
           function change_onglet(name){
             document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
             document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
-            document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
-            document.getElementById('contenu_onglet_'+name).style.display = 'flex';
             anc_onglet = name;
           }
-
-          //-->
 
   </script>
 
   <body style="background-color:white;">
 
     <div id="menus">
-      <span onclick="javascript:change_onglet('acceuil');" id="onglet_acceuil" class="onglet_0 onglet">Acceuil</span>
-      <span onclick="javascript:change_onglet('competences');" id="onglet_competences" class="onglet_0 onglet">Compétences</span>
-      <span onclick="javascript:change_onglet('portfolio');" id="onglet_portfolio" class="onglet_0 onglet">Portfolio</span>
-      <span onclick="javascript:change_onglet('autre');" id="onglet_autre" class="onglet_0 onglet">Autre</span>
-      <span onclick="javascript:change_onglet('contact');" id="onglet_contact" class="onglet_0 onglet">Contact</span>
+      <a onclick="javascript:change_onglet('profil');" href="#profil" id="onglet_profil" class="onglet_0"> Profil </a></span>
+      <a onclick="javascript:change_onglet('competences');"id="onglet_competences"href="#competences" id="onglet_competences" class="onglet_0"> Compétences </a>
+      <a onclick="javascript:change_onglet('portfolio');" href="#portfolio" id="onglet_portfolio" class="onglet_0"> Portfolio </a>
+      <a onclick="javascript:change_onglet('autre');" href="#autre" id="onglet_autre" class="onglet_0"> Autre </a>
     </div>
 
-    <div id="contenu_onglet_acceuil" class="contenu_onglet">
-      <h1> Bienvenue dans mon site Web ! </h1>
-
+    <div id="profil" class="contenu_onglet">
+    <span class="titre"><br/><h1>Bonjour, je suis Jean,</h1></span>
+    <p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      Vous êtes actuellement sur mon site web personnel.
+      <br/>
+      <br/>
+      Je suis actuellement étudiant en DUT Informatique à <b><i><a href="https://www.univ-paris13.fr/">l'Université Sorbonne Paris Nord ( Paris 13 - Villetaneuse) </a></b></i>
+      <br/>
+      <br/>
+      <br/>
+      Je suis passionné par l'informatique depuis mon plus jeune âge nottamment dans le domaine du WEB, de la sécurité et de la recherche.
+      Vous pouvez voir en détail les projets que j'ai réalisé dans le cadre universitaire <a onclick="javascript:change_onglet('portfolio');" href="#portfolio"><b>ici</b></a>
+      , vous pouvez également voir les langages de programmation que j'ai appris <a onclick="javascript:change_onglet('competences');" href="#competences"><b>ici</b></a>
+      <br/>
+      <br/>
+      <br/>
+      J'ai une passion inconditionnel pour la musique quelque soit son genre, de plus je joue de la guitare depuis 5 ans dont 3 ans dans le <a href="https://www.ville-sevran.fr/services-loisirs/culture/arts-plastiques/lespace-francois-mauriac">conservatoire de Sevran, François Mauriac </a>
+      , où j'ai également étudié le solfège.
+    </p>
     </div>
 
 
-  			<div id="contenu_onglet_competences" class="contenu_onglet">
-competences
+  			<div id="competences" >
+          <div class="contenu_onglet">
+HTML ; CSS ; PHP ; Python ; Java
+Logiciel bureautique : Word ; Excel ; Powerpoint
+Logiciel de gestion de porjet : GANTT ; Trello
+          </div>
   			</div>
 
-        <div id="contenu_onglet_portfolio" class="contenu_onglet">
-portfolio
+        <div id="portfolio" class="contenu_onglet">
+Portfolio
   			</div>
 
-        <div id="contenu_onglet_autre" class="contenu_onglet">
+        <div id="autre" class="contenu_onglet">
 Autre
   			</div>
 
@@ -57,11 +78,12 @@ contact
 
               //<!--
 
-                      var anc_onglet = 'acceuil';
+                      var anc_onglet = 'profil';
                       change_onglet(anc_onglet);
 
               //-->
 
             </script>
+
   </body>
 </html>
