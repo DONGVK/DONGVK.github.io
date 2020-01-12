@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>DONG</title>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <script type="text/javascript">
+
+          //<!--
+          function change_onglet(name){
+            document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
+            document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
+            document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
+            document.getElementById('contenu_onglet_'+name).style.display = 'flex';
+            anc_onglet = name;
+          }
+
+          //-->
+
+  </script>
+
+  <body style="background-color:white;">
+
+    <div id="menus">
+      <span onclick="javascript:change_onglet('acceuil');" id="onglet_acceuil" class="onglet_0 onglet">Acceuil</span>
+      <span onclick="javascript:change_onglet('competences');" id="onglet_competences" class="onglet_0 onglet">Compétences</span>
+      <span onclick="javascript:change_onglet('portfolio');" id="onglet_portfolio" class="onglet_0 onglet">Portfolio</span>
+      <span onclick="javascript:change_onglet('autre');" id="onglet_autre" class="onglet_0 onglet">Autre</span>
+      <span onclick="javascript:change_onglet('contact');" id="onglet_contact" class="onglet_0 onglet">Contact</span>
+    </div>
+
+    <div id="contenu_onglet_acceuil" class="contenu_onglet">
+      <h1> Bienvenue dans mon site Web ! </h1>
+
+    </div>
+
+
+  			<div id="contenu_onglet_competences" class="contenu_onglet">
+competences
+  			</div>
+
+        <div id="contenu_onglet_portfolio" class="contenu_onglet">
+portfolio
+  			</div>
+
+        <div id="contenu_onglet_autre" class="contenu_onglet">
+Autre
+  			</div>
+
+        <div id="contenu_onglet_contact" class="contenu_onglet">
+contact
+  			</div>
+
+        <script type="text/javascript">
+
+              //<!--
+
+                      var anc_onglet = 'acceuil';
+                      change_onglet(anc_onglet);
+
+              //-->
+
+            </script>
+  </body>
+</html>
